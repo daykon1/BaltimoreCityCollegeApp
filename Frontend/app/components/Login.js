@@ -5,12 +5,16 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import { BrowserRouter as Router, Switch, Route, Link, browserHistory } from 'react-router-dom';
 import Register from './Register';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 export class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            errorText:'',
+            program: null,
         };
 
     }
@@ -31,8 +35,7 @@ export class Login extends React.Component {
 
             }
             else{
-                console.log("error",result.status);
-
+                this.setState({errorText:'Invalid Username or Password : '+result.statusText})
             }
         });;
     }
@@ -41,14 +44,42 @@ export class Login extends React.Component {
         return (
             <div>
                 <div>
+                {/* <nav className="navbar navbar-dark bg-dark navbar-inverse">
+                    <div className="container-fluid">
+                        <Link to="/Aboutus" className="navbar-brand">About BCC</Link>
+                        <Link to="/Gallery" className="navbar-brand">Gallery</Link>
+                        <Link to="/ContactInfo" className="navbar-brand">ContactInfo</Link>
+                        <Link to="/login" className="navbar-brand">Home</Link>
+                    </div>
+                </nav><br/><br/> */}
                     <MuiThemeProvider>
+                        <AppBar title="" showMenuIconButton={false}>
+                        <SelectField
+                         floatingLabelText="About BCCC" 
+                         value={this.state.detail}
+                            onChange={(event, navDetail) =>
+                                this.setState({
+                                    detail: navDetail,
+                                })}>
+                        <MenuItem value={1} containerElement={<Link to ="/Aboutus"/>} 
+                        primaryText="About us"/>
+                        <MenuItem value={2} containerElement={<Link to ="/Gallery"/>} 
+                        primaryText="Gallery" />
+                        <MenuItem value={3} containerElement={<Link to ="/ContactInfo"/>} 
+                        primaryText="Contact us"/>
+                        <MenuItem value={4} containerElement={<Link to ="/login"/>} 
+                        primaryText="Home" />
+                        </SelectField>
+                        </AppBar>
+                        <br/><br/>
                         <div className="form-group">
                             <form className="form-style">
                                 <TextField
                                     floatingLabelText="Username"
                                     style={{ fontSize: '30px' }}
-                                    required
-                                    onChange={(event, newValue) => this.setState({ username: newValue })}
+                                    errorText= {this.state.errorText}
+                                    onChange={(event, newValue,errorText) => this.setState({ username: newValue,errorText:errorText })}
+                                    
                                 />
                                 <br />
                                 <TextField
@@ -62,7 +93,7 @@ export class Login extends React.Component {
                                         <Link to="/register">Register</Link>
                                     </span>
                                 <span className="span-button">
-                                    <button type="submit" className="btn btn-danger" primary={true} onClick={(event) => this.handleLogIn(event)}>Log In</button>
+                                    <button type="submit" className="btn btn-danger" primary="true" onClick={(event) => this.handleLogIn(event)}>Log In</button>
                                 </span>
                                 </div>
                             </form>
