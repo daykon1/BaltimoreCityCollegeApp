@@ -9,9 +9,8 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Card from 'material-ui/Card';
 import Admin from './Admin';
-import Faculty from './Faculty';
 import LoginHeader from './LoginHeader';
-export class Login extends React.Component {
+export class Faculty extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -91,7 +90,7 @@ export class Login extends React.Component {
                         <form className="form-style">
                         <Card style={{width: "450px", position:"relative", height:"375px", textAlign:"center", backgroundColor:"#EEEEEE"}}>
                         <h4><b>Please Login</b></h4>
-                        <p style={{fontSize:'10px'}}>Enter your student EmailID and password to login</p>
+                        <p style={{fontSize:'10px'}}>Enter your faculty EmailID and password to login</p>
                         <p style={{fontSize:'10px'}}>if you don&rsquo;t have register now</p>
                             <form className="form-style">
                                 <TextField
@@ -134,7 +133,7 @@ export class Login extends React.Component {
         );
     }
 }
-export default Login;
+export default Faculty;
 const style = {
     margin: 15,
 };

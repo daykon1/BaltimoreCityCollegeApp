@@ -29,6 +29,7 @@ class ContactInfo extends React.Component{
                 <AppBar title="" showMenuIconButton={false}>
                         <SelectField
                          floatingLabelText="About BCCC" 
+                         floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
                             onChange={(event, navDetail) =>
                                 this.setState({
@@ -45,7 +46,17 @@ class ContactInfo extends React.Component{
                         </SelectField>
                         </AppBar>
                 </MuiThemeProvider>
-                <p>Contact Info</p>
+                <h1 style={{color:"#FFAB91",}}>About BCCC</h1>
+                        <hr className="hr-color"/>
+                <p>Please contact us with any inquiries or thoughts you may 
+                    needs to discuss with regards to furthering your education, 
+                    finances or fields of study. </p>
+                <h3 style={{textAlign:"center"}}> Campus</h3>
+                <p style={{textAlign:"center"}}>Main Building - 2901 Liberty Heights Avenue Baltimore, MD 21215-7807
+                </p>
+                <p style={{textAlign:"center"}}>Phone - 410-462-8300</p>
+
+
                 </div>
         )
     }

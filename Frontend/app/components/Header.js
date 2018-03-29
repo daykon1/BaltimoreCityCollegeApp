@@ -8,6 +8,8 @@ import MenuItem from 'material-ui/MenuItem';
 import Aboutus from './Aboutus';
 import ContactInfo from './ContactInfo';
 import Gallery from './Gallery';
+import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
+
 
 class Header extends React.Component {
 
@@ -29,6 +31,7 @@ class Header extends React.Component {
                 <br />
                 <br />
             </div>
+            
         )
     }
 

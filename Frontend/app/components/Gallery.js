@@ -6,6 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import AppBar from 'material-ui/AppBar';
 
 
+
 class Gallery extends React.Component{
     constructor(props) {
         super(props);
@@ -29,6 +30,7 @@ class Gallery extends React.Component{
                 <AppBar title="" showMenuIconButton={false}>
                         <SelectField
                          floatingLabelText="About BCCC" 
+                         floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
                             onChange={(event, navDetail) =>
                                 this.setState({
@@ -45,7 +47,11 @@ class Gallery extends React.Component{
                         </SelectField>
                         </AppBar>
                 </MuiThemeProvider>
-                <p>Gallery</p>
+                    <img src={require("./BCCC1.jpg")} alt= "BCCC" width="300px" height="300px"/>&nbsp;&nbsp;
+                    <img src={require("./BCCC2.jpg")} alt= "BCCC" width="300px" height="300px"/>&nbsp;&nbsp;
+                    <img src={require("./campus.jpg")} alt= "Campus" width="300px" height="300px"/>&nbsp;&nbsp;
+                    <img src={require("./campus1.jpg")} alt= "Campus" width="300px" height="300px"/>&nbsp;&nbsp;
+                    <img src={require("./grad.jpg")} alt= "About College" width="300px" height="300px"/>
                 </div>
         )
     }

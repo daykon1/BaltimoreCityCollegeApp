@@ -29,6 +29,7 @@ class Aboutus extends React.Component {
                 <AppBar title="" showMenuIconButton={false}>
                         <SelectField
                          floatingLabelText="About BCCC" 
+                         floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
                             onChange={(event, navDetail) =>
                                 this.setState({
@@ -46,7 +47,37 @@ class Aboutus extends React.Component {
                         </AppBar>
                 </MuiThemeProvider>
                 <div>
-                    <p>About us</p>
+                <h1 style={{color:"#FFAB91",}}>About BCCC</h1>
+                        <hr className="hr-color"/>
+                        <p><span style={{fontSize:"medium"}}>
+                        At Baltimore City Community College (BCCC)
+                         we meet students where they are through personal 
+                         attention with the support of dedicated faculty. 
+                         Each year we educate more than 15,000 students from Baltimore City, 
+                         the State of Maryland, and the world.</span></p>
+                         <p><span style={{fontSize:"medium"}}>
+                         BCCC is a State-sponsored, comprehensive, 
+                         degree-granting community college with five learning 
+                         sites in Baltimore City. We offer 29 associate degree programs 
+                         and 16 certifications in high-demand fields, affordable tuition and 
+                         flexible classes scheduled to meet students needs.</span></p>
+                         <p><span style={{fontSize:"medium"}}>
+                         At BCCC students receive the quality education 
+                         and specialized training critical to get good jobs, 
+                         to transfer to four year institutions and to upgrade or 
+                         acquire new skills to stay competitive in today&rsquo;s changing marketplace.
+                         </span></p>
+                         <p><span style={{fontSize:"medium"}}>
+                         The College&rsquo;s Workforce Development and Continuing Education 
+                         Division serves more than 8,000 students seeking new skills and 
+                         personal growth. BCCC offers General Educational Development for 
+                         students seeking high school diplomas, English as a Second Language 
+                         instruction and Adult Basic Education to strengthen literary skills.
+                         </span></p>
+                         <p><span style={{fontSize:"medium"}}>
+                         BCCC welcomes everyone who wants to enrich their lives 
+                         through education and the pursuit of new skills.
+                         </span></p>
                 </div>
             </div>
         )

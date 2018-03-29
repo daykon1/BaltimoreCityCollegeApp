@@ -106,6 +106,7 @@ export class Register extends React.Component {
                 <AppBar title="" showMenuIconButton={false}>
                         <SelectField
                          floatingLabelText="About BCCC" 
+                         floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
                             onChange={(event, navDetail) =>
                                 this.setState({
@@ -125,6 +126,7 @@ export class Register extends React.Component {
                         <TextField
                             hintText="Enter your First Name"
                             floatingLabelText="First Name"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.fielderrorText}
                             onChange={(event, newValue,fielderrorText) => this.setState({ first_name: newValue,fielderrorText:fielderrorText })}
@@ -133,6 +135,7 @@ export class Register extends React.Component {
                         <TextField
                             hintText="Enter your Middle Name"
                             floatingLabelText="Middle Name"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             onChange={(event, newValue) => this.setState({ middle_name: newValue })}
                         />
@@ -140,6 +143,7 @@ export class Register extends React.Component {
                         <TextField
                             hintText="Enter your Last Name"
                             floatingLabelText="Last Name"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.fielderrorText}
                             onChange={(event, newValue,fielderrorText) => this.setState({ last_name: newValue,fielderrorText:fielderrorText })}
@@ -148,6 +152,7 @@ export class Register extends React.Component {
                         <TextField
                             hintText="Enter your Mobile Number"
                             floatingLabelText="Mobile Name"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.fielderrorText}
                             onChange={(event, newValue,fielderrorText) => this.setState({ mobile_number: newValue,fielderrorText:fielderrorText })}
@@ -156,16 +161,18 @@ export class Register extends React.Component {
                         <TextField
                             hintText="Enter your Address"
                             floatingLabelText="Address"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.fielderrorText}
                             onChange={(event, newValue,fielderrorText) => this.setState({ Address: newValue,fielderrorText:fielderrorText })}
                         />
                         <br />
-                        <br />
                         <DatePicker
                             hintText="Date of Birth"
                             openToYearSelection={true}
+                            floatingLabelText="Date of Birth"
                             style={{ fontSize: '20px' }}
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             value={this.state.controlledDate}
                             onChange={(event, date) =>
                                 this.setState({
@@ -190,6 +197,8 @@ export class Register extends React.Component {
 
                         <SelectField
                             floatingLabelText="Degree Program"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
+                            style={{ fontSize: '20px' }}
                             value={this.state.DegreeProgram}
                             onChange={(event, program) =>
                                 this.setState({
@@ -206,6 +215,7 @@ export class Register extends React.Component {
                             hintText="Enter your Email"
                             type="email"
                             floatingLabelText="Email"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.errorText}
                             onChange={(event, newValue, errorText) => this.setState({ email: newValue, errorText: errorText})}
@@ -215,6 +225,7 @@ export class Register extends React.Component {
                             type="password"
                             hintText="Enter your Password"
                             floatingLabelText="Password"
+                            floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                             style={{ fontSize: '20px' }}
                             errorText={this.state.fielderrorText}
                             onChange={(event, newValue,fielderrorText) => this.setState({ password: newValue,fielderrorText:fielderrorText })}

@@ -4,14 +4,11 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import { BrowserRouter as Router, Switch, Route, Link, browserHistory } from 'react-router-dom';
-import Register from './Register';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Card from 'material-ui/Card';
-import Admin from './Admin';
-import Faculty from './Faculty';
 import LoginHeader from './LoginHeader';
-export class Login extends React.Component {
+export class Admin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,14 +45,6 @@ export class Login extends React.Component {
         return (
             <div>
                 <div>
-                {/* <nav className="navbar navbar-dark bg-dark navbar-inverse">
-                    <div className="container-fluid">
-                        <Link to="/Aboutus" className="navbar-brand">About BCC</Link>
-                        <Link to="/Gallery" className="navbar-brand">Gallery</Link>
-                        <Link to="/ContactInfo" className="navbar-brand">ContactInfo</Link>
-                        <Link to="/login" className="navbar-brand">Home</Link>
-                    </div>
-                </nav><br/><br/> */}
                     <MuiThemeProvider>
                         <AppBar title="" showMenuIconButton={false}>
                         <SelectField
@@ -91,8 +80,7 @@ export class Login extends React.Component {
                         <form className="form-style">
                         <Card style={{width: "450px", position:"relative", height:"375px", textAlign:"center", backgroundColor:"#EEEEEE"}}>
                         <h4><b>Please Login</b></h4>
-                        <p style={{fontSize:'10px'}}>Enter your student EmailID and password to login</p>
-                        <p style={{fontSize:'10px'}}>if you don&rsquo;t have register now</p>
+                        <p style={{fontSize:'10px'}}>Enter your AdminID and password to login</p>
                             <form className="form-style">
                                 <TextField
                                     floatingLabelText="Username"
@@ -111,30 +99,23 @@ export class Login extends React.Component {
                                     onChange={(event, newValue) => this.setState({ password: newValue })}
                                 />
                                 <div>
-                                    <span>
-                                        <Link to="/register" style={{fontFamily:"Arial",color:"#42A5F5",float:"left"}}>Register</Link>
-                                    </span>
                                 <span className="span-button">
                                     <button type="submit" className="btn btn-info" primary="true" onClick={(event) => this.handleLogIn(event)}>Log In</button>
                                 </span>
                                 </div>
-                                <div>
-                                <br/><br/>
-                                <Link to="/register" style={{fontFamily:"Arial",color:"#42A5F5",float:"left",fontSize:"20px"}}>Forget password</Link> 
-                            </div>
                             </form>
                             </Card>
                             </form>
                             </div>
-                        </div>
-                        </div>
+                            </div>
+                            </div>
                     </MuiThemeProvider>
                 </div>
             </div>
         );
     }
 }
-export default Login;
+export default Admin;
 const style = {
     margin: 15,
 };
