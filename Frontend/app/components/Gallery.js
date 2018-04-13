@@ -28,7 +28,7 @@ class Gallery extends React.Component{
                 </nav> */}
                 <MuiThemeProvider>
                 <AppBar title="" showMenuIconButton={false}>
-                        <SelectField
+                        {/* <SelectField
                          floatingLabelText="About BCCC" 
                          floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
@@ -44,7 +44,11 @@ class Gallery extends React.Component{
                         primaryText="Contact us"/>
                         <MenuItem value={4} containerElement={<Link to ="/login"/>} 
                         primaryText="Home" />
-                        </SelectField>
+                        </SelectField> */}
+                        <Link to ='/Aboutus' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>About us</Link>
+                        <Link to ='/Gallery' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Gallery</Link>
+                        <Link to ='/ContactInfo' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Contact us</Link>
+                        <Link to ='/login' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Home</Link>
                         </AppBar>
                 </MuiThemeProvider>
                     <img src={require("./BCCC1.jpg")} alt= "BCCC" width="300px" height="300px"/>&nbsp;&nbsp;

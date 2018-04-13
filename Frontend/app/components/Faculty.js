@@ -57,7 +57,7 @@ export class Faculty extends React.Component {
                 </nav><br/><br/> */}
                     <MuiThemeProvider>
                         <AppBar title="" showMenuIconButton={false}>
-                        <SelectField
+                        {/* <SelectField
                          floatingLabelText="About BCCC" 
                          floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
@@ -73,7 +73,11 @@ export class Faculty extends React.Component {
                         primaryText="Contact us"/>
                         <MenuItem value={4} containerElement={<Link to ="/login"/>} 
                         primaryText="Home" />
-                        </SelectField>
+                        </SelectField> */}
+                        <Link to ='/Aboutus' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>About us</Link>
+                        <Link to ='/Gallery' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Gallery</Link>
+                        <Link to ='/ContactInfo' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Contact us</Link>
+                        <Link to ='/login' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Home</Link>
                         </AppBar>
                         <br/><br/>
                         <div className="row">
@@ -89,7 +93,7 @@ export class Faculty extends React.Component {
                         <div className="form-group">
                         <form className="form-style">
                         <Card style={{width: "450px", position:"relative", height:"375px", textAlign:"center", backgroundColor:"#EEEEEE"}}>
-                        <h4><b>Please Login</b></h4>
+                        <h4><b>Faculty Login</b></h4>
                         <p style={{fontSize:'10px'}}>Enter your faculty EmailID and password to login</p>
                         <p style={{fontSize:'10px'}}>if you don&rsquo;t have register now</p>
                             <form className="form-style">

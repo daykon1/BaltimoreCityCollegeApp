@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -22,17 +22,17 @@ export class Admin extends React.Component {
 
     handleLogIn(event) {
         event.preventDefault();
-        fetch('http://localhost:8090/user/login', {
+        fetch('http://localhost:8090/admin/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                email: this.state.username,
+                username: this.state.username,
                 password: this.state.password
 
             })
         }).then((result)=>{
             if(result.status==200){
-                this.props.history.push('/home')
+                this.props.history.push('/adminHome')
 
             }
             else{
@@ -47,7 +47,7 @@ export class Admin extends React.Component {
                 <div>
                     <MuiThemeProvider>
                         <AppBar title="" showMenuIconButton={false}>
-                        <SelectField
+                        {/* <SelectField
                          floatingLabelText="About BCCC" 
                          floatingLabelStyle={{fontFamily:"Arial",fontWeight:"bold"}}
                          value={this.state.detail}
@@ -63,7 +63,11 @@ export class Admin extends React.Component {
                         primaryText="Contact us"/>
                         <MenuItem value={4} containerElement={<Link to ="/login"/>} 
                         primaryText="Home" />
-                        </SelectField>
+                        </SelectField> */}
+                        <Link to ='/Aboutus' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>About us</Link>
+                        <Link to ='/Gallery' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Gallery</Link>
+                        <Link to ='/ContactInfo' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Contact us</Link>
+                        <Link to ='/login' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Home</Link>
                         </AppBar>
                         <br/><br/>
                         <div className="row">
@@ -79,7 +83,7 @@ export class Admin extends React.Component {
                         <div className="form-group">
                         <form className="form-style">
                         <Card style={{width: "450px", position:"relative", height:"375px", textAlign:"center", backgroundColor:"#EEEEEE"}}>
-                        <h4><b>Please Login</b></h4>
+                        <h4><b>Admin Login</b></h4>
                         <p style={{fontSize:'10px'}}>Enter your AdminID and password to login</p>
                             <form className="form-style">
                                 <TextField

@@ -5,60 +5,25 @@ import { BrowserRouter as Router, Switch, Route, Link, browserHistory } from 're
 import SplitterLayout from 'react-splitter-layout';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
+import AppBar from 'material-ui/AppBar';
 
 
 class Home extends React.Component{
     render(){
         return(
             <div className="container">
-
-            <Link to="/login" style={{float:'right'}}>Logout</Link><hr/>
+            <MuiThemeProvider>
                 <div>
-                    {/* <MuiThemeProvider>
-                    <RadioButtonGroup name="actions" defaultSelected="register">
-                            <RadioButton
-                                labelStyle={{ color: '#7B7D7F', fontSize: '16px' }}
-                                style={{ display: 'inline-block', width: '50%' }}
-                                value="register"
-                                label="Register"
-                            />
-                            <RadioButton
-                                labelStyle={{ color: '#7B7D7F', fontSize: '16px', lineHeight: '22px' }}
-                                style={{ display: 'inline-block', width: '50%' }}
-                                value="drop"
-                                label="Drop"
-                            />
-                             <RadioButton
-                                labelStyle={{ color: '#7B7D7F', fontSize: '16px', lineHeight: '22px' }}
-                                style={{ display: 'inline-block', width: '50%' }}
-                                value="withdraw"
-                                label="Withdraw"
-                            />
-                             <RadioButton
-                                labelStyle={{ color: '#7B7D7F', fontSize: '16px', lineHeight: '22px' }}
-                                style={{ display: 'inline-block', width: '50%' }}
-                                value="grade"
-                                label="Grade"
-                            />
-                             <RadioButton
-                                labelStyle={{ color: '#7B7D7F', fontSize: '16px', lineHeight: '22px' }}
-                                style={{ display: 'inline-block', width: '50%' }}
-                                value="enrolled"
-                                label="Courses Enrolled"
-                            />
-                        </RadioButtonGroup>
-                        <hr/>
-                        </MuiThemeProvider> */}
-                        <br/>
-                        <hr/>
-                        <Link to ='/enroll'>Enroll</Link><br/>
-                        <Link to ='/withdraw'>Withdraw</Link><br/>
-                        <Link to ='/drop'>Drop</Link><br/>
-                        <Link to ='/grade'>Grade</Link><br/>
-                        <Link to ='/courses'>Courses Enrolled</Link><br/>
-                        <hr/>
+            <AppBar title="" showMenuIconButton={false}>
+                        <Link to ='/enroll' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Enroll</Link>
+                        <Link to ='/withdraw' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Withdraw</Link>
+                        <Link to ='/drop' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Drop</Link>
+                        <Link to ='/grade' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Grade</Link>
+                        <Link to ='/courses' style={{flex:'auto',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Courses Enrolled</Link>
+                        <Link to="/login" style={{float:'right',color:'black',fontFamily:"Arial",fontWeight:"bold"}}>Logout</Link>
+                </AppBar>
                 </div>
-                <footer>This is footer</footer>
+                </MuiThemeProvider>
             </div>
         )
     }

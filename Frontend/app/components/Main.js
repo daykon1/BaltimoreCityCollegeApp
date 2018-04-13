@@ -13,6 +13,13 @@ import Grade from './Grade'
 import EnrolledCourses from './EnrolledCourse'
 import Admin from './Admin'
 import Faculty from './Faculty'
+import AdminHome from './AdminHome';
+import AddCourse from './AddCourse';
+import DeleteCourse from './DeleteCourse';
+import AddDepartment from './AddDepartment';
+import DeleteDepartment from './DeleteDepartment';
+import AddFaculty from './AddFaculty';
+import DeleteFaculty from './DeleteFaculty';
 
 
 const Main = () => (
@@ -32,6 +39,17 @@ const Main = () => (
       <Route path='/courses' component={EnrolledCourses}/>
       <Route path='/admin' component={Admin}/>
       <Route path='/faculty' component={Faculty}/>
+      <Route path='/addcourse' component={AddCourse}/>
+      <Route path='/deletecourse' component={DeleteCourse}/>
+      <Route path='/adddep' component={AddDepartment}/>
+      <Route path='/deletedep' component={DeleteDepartment}/>
+      <Route path='/addfaculty' component={AddFaculty}/>
+      <Route path='/deletefaculty' component={DeleteFaculty}/>
+      <Route path='/adminHome' component={AdminHome}/>
+
+
+
+
 
 
     </Switch>

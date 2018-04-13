@@ -9,6 +9,8 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/productRoutes');
 const userRoutes = require('./api/routes/userRoutes');
+const adminRoutes = require('./api/routes/adminRoutes');
+const courseRoutes =require('./api/routes/courseRoutes');
 
 var mongoDB = 'mongodb://127.0.0.1:27017/BaltimoreCityCollege';
 mongoose.connect(mongoDB);
@@ -34,6 +36,8 @@ app.use((req, res, next) => {
 
 app.use('/product', productRoutes);
 app.use('/user',userRoutes);
+app.use('/admin',adminRoutes);
+app.use('/course',courseRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Not Found');
